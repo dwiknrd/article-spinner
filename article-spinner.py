@@ -1,7 +1,6 @@
 import re
 import random
 import nltk
-nltk.download()
 from nltk.corpus import wordnet
 from nltk.tokenize import regexp_tokenize
 import nltk.data
@@ -21,7 +20,7 @@ class spinner(object):
 
     def splitToSentences(self, content):
 
-        tokenizer = nltk.data.load('nltk_data/punkt/english.pickle')
+        tokenizer = nltk.data.load('tokenizers/punkt/PY3/english.pickle')
 
         return tokenizer.tokenize(content)
 
