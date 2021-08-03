@@ -54,8 +54,10 @@ def random_sample(d):
 
 def test_spinner():
     review = random.choice(negative_reviews)
-    text_article = review.text.lower()
+    text_article = review.text
     print("Original:", text_article)
+    text_article = text_article.lower()
+    # print("Lower Text:", text_article)
     tokens = nltk.tokenize.word_tokenize(text_article)
     for i in range(len(tokens) - 2):
         if random.random() < 0.2: # 20% chance of replacement
